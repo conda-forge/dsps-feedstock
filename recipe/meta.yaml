@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ArgonneCPAC/dsps/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 0cb82fea845cb8aea8ad635f215b42b0a65e4b16b4afed2ae662e8a546aa3c9b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 29229b915266c9c2aea6bc5224128005e060fb907c0c2207c0ecd0071b46d945
 
 build:
   noarch: python
@@ -18,8 +18,6 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools_scm >=7
-    - setuptools >=45
   run:
     - python >=3.6
     - numpy
