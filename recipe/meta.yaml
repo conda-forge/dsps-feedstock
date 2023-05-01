@@ -1,5 +1,5 @@
 {% set name = "dsps" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ArgonneCPAC/dsps/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 347c161f17deeb7ae5c9b4bb99c32247591b6e81cb5dc94d92c6bd965b4e32f9
+  sha256: 0cb82fea845cb8aea8ad635f215b42b0a65e4b16b4afed2ae662e8a546aa3c9b
 
 build:
   noarch: python
