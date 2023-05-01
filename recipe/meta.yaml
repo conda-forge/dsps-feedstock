@@ -1,13 +1,13 @@
 {% set name = "dsps" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ArgonneCPAC/dsps/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 347c161f17deeb7ae5c9b4bb99c32247591b6e81cb5dc94d92c6bd965b4e32f9
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 29229b915266c9c2aea6bc5224128005e060fb907c0c2207c0ecd0071b46d945
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - python >=3.6
     - numpy
     - jax
+    - h5py
     - diffmah
     - diffstar >=0.1.0
 
@@ -33,7 +34,7 @@ about:
   home: https://github.com/ArgonneCPAC/dsps
   license: BSD-3-Clause
   license_family: BSD
-  license_file: LICENSE
+  license_file: LICENSE.rst
   summary: Differentiable Stellar Population Synthesis
 
 extra:
