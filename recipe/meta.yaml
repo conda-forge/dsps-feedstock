@@ -22,6 +22,7 @@ requirements:
     - python >=3.6
     - numpy
     - jax
+    - h5py
     - diffmah
     - diffstar >=0.1.0
 
