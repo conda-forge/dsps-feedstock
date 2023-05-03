@@ -1,5 +1,5 @@
 {% set name = "dsps" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 29229b915266c9c2aea6bc5224128005e060fb907c0c2207c0ecd0071b46d945
+  sha256: d09fc3439871eb8df61456a13e250a5ad2d236776cb536411576289d694f2098
 
 build:
   noarch: python
@@ -23,6 +23,9 @@ requirements:
     - numpy
     - jax
     - h5py
+{% if version == "0.3.1" %}
+    - scipy
+{% endif %}
     - diffmah
     - diffstar >=0.1.0
 
